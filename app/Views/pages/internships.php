@@ -45,6 +45,36 @@
                     </ul>
                 </div>
             </details>
+
+            <details class="group bg-gray-50 rounded-xl shadow px-6 py-4">
+                <summary class="cursor-pointer list-none flex justify-between items-center">
+                    <div>
+                        <h3 class="font-medium">Librairie La Livreraie - Mende</h3>
+                        <p class="text-sm text-gray-500">Développement d'un module de click & collect | Janvier 2026 - Février 2026</p>
+                    </div>
+                    <span class="text-sm text-gray-400 group-open:rotate-180 transition">⌄</span>
+                </summary>
+
+                <div class="mt-6 text-gray-700 leading-relaxed">
+                    <p class="mb-3 leading-relaxed">
+                        Ce deuxième stage en informatique s'est déroulée dans la même entreprise que le précédent. Pendant ce stage, le but était de développer
+                        un modue de click & collect. Pour cela, j'ai passé le site sur le framework Laravel, permettant une meilleure organisation du travail,
+                        et la découverte d'un nouveau framework.
+                    </p>
+
+                    <p class="leading-relaxed mb-3">
+                        Le site est accessible à<a href="https://lalivreraie.fr" target="_blank" class="text-blue-600 hover:underline ml-1">cette adresse</a>.
+                    </p>
+
+
+                    <ul class="list-disc list-inside text-sm text-gray-600">
+                        <li>Développement PHP/Laravel</li>
+                        <li>Parsing de fichiers textuels en backend</li>
+                        <li>Interaction avec une API tierce (Google Books API)</li>
+                        <li>Interaction avec une base de données (Eloquent)</li>
+                    </ul>
+                </div>
+            </details>
         </div>
     </section>
 
