@@ -2,44 +2,68 @@
 
 namespace App\Controllers;
 
-class Contact extends BaseController {
-    public function getIndex() {
-        $data = [
+class Contact extends BaseController
+{
+    public function getIndex()
+    {
+        return view('pages/contact', [
             'title' => 'Contact - Florian Fernandes'
-        ];
-
-        return view('pages/contact', $data);
+        ]);
     }
 
-    public function postSend() {
+    public function postSend()
+    {
         $session = session();
 
-        $nom = $this->request->getPost('name');
-        $mail = $this->request->getPost('email');
+        $nom     = $this->request->getPost('name');
+        $mail    = $this->request->getPost('email');
         $subject = $this->request->getPost('subject');
         $message = $this->request->getPost('message');
 
-        $email = \Config\Services::email();
+        $data = [
+            'sender' => [
+                'email' => 'fernandesflorian380@gmail.com',
+                'name'  => 'Portfolio'
+            ],
+            'to' => [
+                ['email' => 'fernandesflorian38200@gmail.com']
+            ],
+            'replyTo' => [
+                'email' => $mail,
+                'name'  => $nom
+            ],
+            'subject' => $subject,
+            'htmlContent' => "
+                <p><strong>Nom :</strong> {$nom}</p>
+                <p><strong>Email :</strong> {$mail}</p>
+                <p><strong>Message :</strong><br>{$message}</p>
+            "
+        ];
 
-        $email->setFrom($mail, $nom);
-        $email->setTo('fernandesflorian38200@gmail.com');
-        $email->setSubject($subject);
+        $ch = curl_init();
 
-        $body = "
-            <p><strong>Nom :</strong> {$nom}</p>
-            <p><strong>Email :</strong> {$mail}</p>
-            <p><strong>Message :</strong><br>{$message}</p>
-        ";
+        curl_setopt_array($ch, [
+            CURLOPT_URL => 'https://api.brevo.com/v3/smtp/email',
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_POST => true,
+            CURLOPT_HTTPHEADER => [
+                'accept: application/json',
+                'api-key: ' . $apiKey,
+                'content-type: application/json'
+            ],
+            CURLOPT_POSTFIELDS => json_encode($data),
+        ]);
 
-        $email->setMessage($body);
+        $response = curl_exec($ch);
+        $error    = curl_error($ch);
+        curl_close($ch);
 
-        if ($email->send()) {
-            $session->setFlashdata('successSend', 'Votre message a bien été envoyé, une réponse vous sera adressée sous peu');
+        if ($error) {
+            dd($error);
         } else {
-            $session->setFlashdata('errorSend', 'Une erreur est survenue lors de l\'envoi de votre message');
+            $session->setFlashdata('successSend', 'Votre message a bien été envoyé.');
         }
 
         return redirect()->back();
-
     }
 }

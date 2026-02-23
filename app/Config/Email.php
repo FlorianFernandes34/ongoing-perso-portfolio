@@ -6,7 +6,7 @@ use CodeIgniter\Config\BaseConfig;
 
 class Email extends BaseConfig
 {
-    public string $fromEmail  = 'fernandesflorian38200@gmail.com';
+    public string $fromEmail  = 'contact@florianf.fr';
     public string $fromName   = 'Florian Fernandes';
     public string $recipients = '';
 
@@ -28,17 +28,17 @@ class Email extends BaseConfig
     /**
      * SMTP Server Hostname
      */
-    public string $SMTPHost = 'smtp.gmail.com';
+    public string $SMTPHost = 'smtp-relay.brevo.com';
 
     /**
      * SMTP Username
      */
-    public string $SMTPUser = 'fernandesflorian38200@gmail.com';
+    public string $SMTPUser = 'ad884597dbfe751a377dbca985eecf16';
 
     /**
      * SMTP Password
      */
-    public string $SMTPPass = 'parr xvma qava qmbf';
+    public string $SMTPPass = '7067ff5cb0090d77243e44ea7a262608';
 
     /**
      * SMTP Port
@@ -48,7 +48,7 @@ class Email extends BaseConfig
     /**
      * SMTP Timeout (in seconds)
      */
-    public int $SMTPTimeout = 5;
+    public int $SMTPTimeout = 15;
 
     /**
      * Enable persistent SMTP connections
