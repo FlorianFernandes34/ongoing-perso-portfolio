@@ -2,31 +2,24 @@
 <?= $this->section('content') ?>
 
 <!-- HERO -->
-<section class="max-w-5xl mx-auto px-6 mt-32 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<!-- HERO -->
+<section class="max-w-5xl mx-auto px-6 mt-32">
+    <div class="max-w-2xl mx-auto text-center">
 
-    <!-- TEXTE -->
-    <div>
         <h1 class="text-4xl font-semibold leading-tight mb-8">
             Florian Fernandes<br>
-            Etudiant Développeur
+            Étudiant Développeur
         </h1>
 
         <p class="text-muted text-lg mb-10">
-            Étudiant en BTS SIO, passionné par le développement web
-            et la création d’applications simples, fiables
-            et pensées pour durer.
+            Étudiant en BTS SIO, je conçois et développe des applications robustes et maintenables.
         </p>
 
-        <p class="text-muted max-w-md">
-            Ce portfolio présente mon profil, mon parcours, ma veille technologies, ainsi que mes expériences professionnelles.
+        <p class="text-muted">
+            Ce portfolio présente mon profil, mon parcours, ma veille technologique ainsi que mes expériences professionnelles.
         </p>
-    </div>
 
-    <!-- IMAGE -->
-    <div>
-        <img src="<?= base_url('public/images/portrait.jpg') ?>" alt="Portrait Florian Fernandes" class="w-full h-auto rounded-md object-cover grayscale">
     </div>
-
 </section>
 
 <!-- PROFIL -->
@@ -42,13 +35,13 @@
         <h2 class="text-2xl font-medium mb-6">Profil</h2>
 
         <p class="text-muted leading-relaxed mb-6">
-            Je m’intéresse particulièrement au développement d'applications web.
-        </p>
-
-        <p class="text-muted leading-relaxed mb-6">
-            Passionné de développement depuis le lycée, ma nature (très) curieuse me pousse à vouloir comprendre le fonctionnement des technologies qui régissent
+            Passionné de développement depuis le lycée, ma nature curieuse me pousse à vouloir comprendre le fonctionnement des technologies qui régissent
             le monde de l'informatique.
         </p>
+        <a target="_blank" href="<?= base_url('public/documents/cv_fernandes_florian.pdf')?>"
+           class="inline-block mt-6 px-6 py-3 border border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white transition">
+            Télécharger le CV
+        </a>
     </div>
 
 </section>

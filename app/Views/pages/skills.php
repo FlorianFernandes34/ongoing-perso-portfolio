@@ -57,34 +57,22 @@
 
     </div>
 </section>
-<!-- CERTIFICATIONS -->
-<section class="max-w-6xl mx-auto px-6 mt-16 mb-40">
 
-    <h2 class="text-3xl font-semibold mb-10 text-center">📜 Certifications</h2>
+<!-- CERTIFICATIONS -->
+
+<!--<section class="max-w-6xl mx-auto px-6 mt-16 mb-40">
+
+    <h2 class="text-3xl font-semibold mb-10 text-center">Certifications</h2>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-        <!-- Certification 1 -->
-        <a href="/docs/certification1.pdf" target="_blank" class="block p-6 bg-gray-50 rounded-xl shadow hover:shadow-lg transition">
-            <h3 class="text-xl font-medium mb-2">Certification HTML & CSS</h3>
+        <a href="" target="_blank" class="block p-6 bg-gray-50 rounded-xl shadow hover:shadow-lg transition">
+            <h3 class="text-xl font-medium mb-2">nom certif</h3>
             <p class="text-gray-500 text-sm">Cliquez pour voir la certification</p>
         </a>
-
-        <!-- Certification 2 -->
-        <a href="/docs/certification2.pdf" target="_blank" class="block p-6 bg-gray-50 rounded-xl shadow hover:shadow-lg transition">
-            <h3 class="text-xl font-medium mb-2">Certification JavaScript</h3>
-            <p class="text-gray-500 text-sm">Cliquez pour voir la certification</p>
-        </a>
-
-        <!-- Certification 3 -->
-        <a href="/docs/certification3.pdf" target="_blank" class="block p-6 bg-gray-50 rounded-xl shadow hover:shadow-lg transition">
-            <h3 class="text-xl font-medium mb-2">Certification PHP / CodeIgniter 4</h3>
-            <p class="text-gray-500 text-sm">Cliquez pour voir la certification</p>
-        </a>
-
     </div>
-
 </section>
+-->
 
 
 <?= $this->endSection() ?>
